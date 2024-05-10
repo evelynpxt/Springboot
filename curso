@@ -10,4 +10,41 @@ public class HelloController {
     }
 }
 
+Receber no insomnia string
+
+{
+"nome":"Rodrigo Ferreira",
+"email":"rodrigo.ferreira@voll.med",
+"crm":"123456",
+"especialidade":"ortopedia",
+"endereco":{
+    "logradouro":"rua 1",
+    "bairro":"bairro",
+    "cep:"12345678",
+    "cidade":"Brasilia,
+    "uf":"DF",
+    "numero":"1",
+    "complemento":"complemento",
+    }
+}
+
+Metodo medicos
+
+package med.voll.Api.controller;
+
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping ("medicos")
+
+public class Medicocontroller {
+
+    @PostMapping
+    public void cadastrar(@RequestBody String json){
+        System.out.println(json);
+
+
 
